@@ -66,7 +66,7 @@ test_generator = test_datagen.flow_from_directory(
     batch_size = 512,
     class_mode = 'categorical')
 
-check = ModelCheckpoint(filepath='/home/bipkg/workspace/SensitivePic/keras/checkpoint/weights.hdf5', 
+check = ModelCheckpoint(filepath='./checkpoint/weights.hdf5', 
                 monitor='val_loss', 
                 verbose=0, 
                 save_best_only=True, 
@@ -91,8 +91,8 @@ parallel_model.fit_generator(
     callbacks = [check]
     )
 
-final_model.save_weights('/home/bipkg/workspace/SensitivePic/keras/model/fine_tuned_net_weight_0.h5')
-final_model.save('/home/bipkg/workspace/SensitivePic/keras/model/fine_tuned_net_model_0.h5')
+final_model.save_weights('./model/fine_tuned_net_weight_0.h5')
+final_model.save('./model/fine_tuned_net_model_0.h5')
 print ("model saved")
 
 # parallel_model.fit(x, y, epochs=20, batch_size=256)
