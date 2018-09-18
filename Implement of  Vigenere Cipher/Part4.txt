@@ -1,0 +1,8 @@
+When using a single key which is at least as large as the plaintext,
+it will be less possible for people who has intercepted the ciphertext
+to use the frequency analysis to do the decipher thing. Since the key
+will not be repeatwhile encrypting, we cannot simplify the decrypting
+process into decrypting Caesar Cipher by putting the letters enciphered
+by the same key letter together. To ensure this the randomness of the
+key should be necessary. The substring of the key should not be repeated
+regularly.
